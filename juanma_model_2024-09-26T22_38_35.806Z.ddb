@@ -1,0 +1,385 @@
+{
+  "author": "Unnamed",
+  "title": "juanma_model",
+  "date": "2024-09-27T00:43:31.695Z",
+  "tables": [
+    {
+      "id": 0,
+      "name": "media.shows",
+      "x": -617.34375,
+      "y": -334.78906249999994,
+      "fields": [
+        {
+          "name": "show_id",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "PK films",
+          "id": 0
+        },
+        {
+          "name": "title",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "titulo films",
+          "id": 1,
+          "size": 255
+        },
+        {
+          "name": "date_added",
+          "type": "DATE",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "fecha de añadido reparto",
+          "id": 2,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "release_year",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "año de lanzamiento",
+          "id": 3,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "rating",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "rating film",
+          "id": 4,
+          "size": 10
+        },
+        {
+          "name": "duration",
+          "type": "SMALLINT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "duracion film",
+          "id": 5,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "description",
+          "type": "TEXT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "descripción film",
+          "id": 6,
+          "size": 65535
+        },
+        {
+          "name": "type",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "tipo de pelicula",
+          "id": 7,
+          "size": 50
+        },
+        {
+          "name": "year_added",
+          "type": "SMALLINT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "año en que fue añadida",
+          "id": 8,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "month_added",
+          "type": "SMALLINT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "mes que fue añadida",
+          "id": 9,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "season_count",
+          "type": "SMALLINT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "conteo de temporadas",
+          "id": 10,
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "color": "#f03c3c",
+      "key": 1727395315824
+    },
+    {
+      "id": 1,
+      "name": "media.casting",
+      "x": 278.0742187500001,
+      "y": -255.15625,
+      "fields": [
+        {
+          "name": "show_id",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "FK show",
+          "id": 0
+        },
+        {
+          "name": "actors",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "reparto de actores",
+          "id": 1,
+          "size": 255
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "color": "#175e7a",
+      "key": 1727396159871
+    },
+    {
+      "id": 2,
+      "name": "media.directors",
+      "x": 261.1328125,
+      "y": -107.36718749999997,
+      "fields": [
+        {
+          "name": "show_id",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "FK show",
+          "id": 0
+        },
+        {
+          "name": "director",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "reparto directores",
+          "id": 1,
+          "size": 50
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "color": "#175e7a",
+      "key": 1727396395028
+    },
+    {
+      "id": 3,
+      "name": "media.countries",
+      "x": 211.2890625000001,
+      "y": 35.371093749999886,
+      "fields": [
+        {
+          "name": "show_id",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "fk shows",
+          "id": 0
+        },
+        {
+          "name": "country",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "tabla paises",
+          "id": 1,
+          "size": 50
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "color": "#175e7a",
+      "key": 1727396491903
+    },
+    {
+      "id": 4,
+      "name": "media.genres",
+      "x": 185.3125000000001,
+      "y": 179.90625,
+      "fields": [
+        {
+          "name": "show_id",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "fk shows",
+          "id": 0
+        },
+        {
+          "name": "genre",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "generos peliculas",
+          "id": 1,
+          "size": 20
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "color": "#175e7a",
+      "key": 1727396573313
+    }
+  ],
+  "relationships": [
+    {
+      "startTableId": 1,
+      "startFieldId": 0,
+      "endTableId": 0,
+      "endFieldId": 0,
+      "cardinality": "one_to_many",
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "media.casting_show_id_fk",
+      "id": 0
+    },
+    {
+      "startTableId": 2,
+      "startFieldId": 0,
+      "endTableId": 0,
+      "endFieldId": 0,
+      "cardinality": "one_to_many",
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "media.directors_show_id_fk",
+      "id": 1
+    },
+    {
+      "startTableId": 3,
+      "startFieldId": 0,
+      "endTableId": 0,
+      "endFieldId": 0,
+      "cardinality": "one_to_many",
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "media.countries_show_id_fk",
+      "id": 2
+    },
+    {
+      "startTableId": 4,
+      "startFieldId": 0,
+      "endTableId": 0,
+      "endFieldId": 0,
+      "cardinality": "one_to_many",
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "media.genres_show_id_fk",
+      "id": 3
+    }
+  ],
+  "notes": [],
+  "subjectAreas": [
+    {
+      "id": 0,
+      "name": "tabla_maestra",
+      "x": -678,
+      "y": -395.30859375,
+      "width": 527.26953125,
+      "height": 560.28515625,
+      "color": "#f03c3c"
+    },
+    {
+      "id": 1,
+      "name": "tablas_foraneas",
+      "x": 81.87890625,
+      "y": -305.05859375,
+      "width": 794.0664062499999,
+      "height": 639.484375,
+      "color": "#175e7a"
+    }
+  ],
+  "database": "postgresql",
+  "types": [],
+  "enums": []
+}
